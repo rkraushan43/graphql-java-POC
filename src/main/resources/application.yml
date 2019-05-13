@@ -1,0 +1,26 @@
+#server
+server:
+  port: 3000
+
+#Database
+spring:
+  application:
+    name: graphql-java-poc
+  datasource:
+    url: jdbc:mysql://localhost:3306/graphql-java-poc
+    username: root
+    password: root
+  jpa:
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        jdbc:
+          lob:
+            non_contextual_creation: true
+        dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+#Log
+logging:
+  level:
+    com: debug
+
